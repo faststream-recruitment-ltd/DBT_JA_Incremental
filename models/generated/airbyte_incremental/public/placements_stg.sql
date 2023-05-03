@@ -1,0 +1,73 @@
+{{ config(
+    indexes = [{'columns':['_airbyte_emitted_at'],'type':'btree'}],
+    unique_key = '_airbyte_ab_id',
+    schema = "Staging",
+    tags = [ "top-level-intermediate" ]
+) }}
+-- SQL model to build a hash column based on the values of this record
+-- depends_on: {{ ref('placements_ab2') }}
+select
+    {{ dbt_utils.surrogate_key([
+        'placementid',
+        'job_jobId',
+        'job_source',
+        adapter.quote('type'),
+        'owner_email',
+        'owner_userId',
+        'owner_lastName',
+        'owner_firstName',
+        'salary_fee',
+        'salary_base',
+        'salary_total',
+        'status_name',
+        'status_statusId',
+        'company_companyId',
+        'company_name',
+        'contact_email',
+        'contact_lastName',
+        'contact_contactId',
+        'contact_firstName',
+        'jobTitle',
+        'candidate_email',
+        'candidate_candidateId',
+        'candidate_lastName',
+        'candidate_firstName',
+        'candidate_source',
+        'createdAt',
+        'startDate',
+        'updatedAt',
+        array_to_string('recruiters'),
+        'chargeCurrency',
+        'workplaceAddress_url',
+        'workplaceAddress_city',
+        'workplaceAddress_name',
+        'workplaceAddress_street',
+        'workplaceAddress_country',
+        'workplaceAddress_postcode',
+        'workplaceAddress_postalCode',
+        array_to_string('custom'),
+        'updatedBy_email',
+        'updatedBy_userId',
+        'updatedBy_lastName',
+        'updatedBy_firstName',
+        'paymentType',
+        'billing_email',
+        'billing_terms',
+        'billing_dueDate',
+        'feeSplit',
+        'createdBy_email',
+        'createdBy_userId',
+        'createdBy_lastName',
+        'createdBy_firstName',
+        'contractRate_onCosts',
+        'contractRate_ratePer',
+        'contractRate_onCostsType',
+        'contractRate_candidateRate',
+        'summary',
+    ]) }} as _airbyte_placements_hashid,
+    tmp.*
+from {{ ref('placements_ab2') }} tmp
+-- placements
+where 1 = 1
+{{ incremental_clause('_airbyte_emitted_at', this) }}
+
