@@ -23,6 +23,7 @@ select
         'noteid',
         array_to_string('placements'),
         'placementId',
+        'placement_jobId',
         'placement_jobTitle',
         'placement_company',
         'placement_companyId',

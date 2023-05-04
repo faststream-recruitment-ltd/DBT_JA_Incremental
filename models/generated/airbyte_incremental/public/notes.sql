@@ -41,6 +41,7 @@ select
     companyId,
     company_name,
     placementId,
+    placement_jobId,
     placement_jobTitle,
     placement_company,
     placement_companyId,

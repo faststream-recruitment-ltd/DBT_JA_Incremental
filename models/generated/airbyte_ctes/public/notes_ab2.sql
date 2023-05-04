@@ -21,6 +21,7 @@ select
     cast(noteid as {{ dbt_utils.type_string() }}) as noteid,
     placements,
     cast(placementId as {{ dbt_utils.type_string() }}) as placementId,
+    cast(placement_jobId as {{ dbt_utils.type_string() }}) as placement_jobId,    
     cast(placement_jobTitle as {{ dbt_utils.type_string() }}) as placement_jobTitle,
     cast(placement_company as {{ dbt_utils.type_string() }}) as placement_company,
     cast(placement_companyId as {{ dbt_utils.type_string() }}) as placement_companyId,
