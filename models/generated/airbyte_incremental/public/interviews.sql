@@ -1,7 +1,7 @@
 {{ config(
     indexes = [{'columns':['_airbyte_unique_key'],'unique':True}],
     unique_key = "_airbyte_unique_key",
-    schema = "JobAdder",
+    schema = "jobadder",
     tags = [ "top-level" ]
 ) }}
 -- Final base SQL model
