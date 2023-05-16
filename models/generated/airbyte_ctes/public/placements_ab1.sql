@@ -10,7 +10,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['placementId'], ['placementId']) }} as placementid,
     {{ json_extract_scalar('_airbyte_data', ['job', 'jobId'], ['job_jobId']) }} as job_jobId,
     {{ json_extract_scalar('_airbyte_data', ['job', 'source'], ['job_source']) }} as job_source,
-    {{ json_extract_scalar('_airbyte_data', ['Job'], ['jobTitle']) }} as jobTitle,
+    {{ json_extract_scalar('_airbyte_data', ['jobTitle'], ['jobTitle']) }} as jobTitle,
     {{ json_extract_scalar('_airbyte_data', ['type'], ['type']) }} as {{ adapter.quote('type') }},
     {{ json_extract_scalar('_airbyte_data', ['owner', 'email'], ['owner_email']) }} as owner_email,
     {{ json_extract_scalar('_airbyte_data', ['owner', 'userId'], ['owner_userId']) }} as owner_userId,
