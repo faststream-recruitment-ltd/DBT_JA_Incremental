@@ -34,7 +34,7 @@ select
     cast({{ adapter.quote('source') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('source') }},
     cast({{ adapter.quote('type') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('type') }},
     cast(reference as {{ dbt_utils.type_string() }}) as reference,
-    cast(createdat as {{ dbt_utils.type_string() }}) as createdat,
+    cast(createdat as timestamp with time zone) as createdat,
     candidates,
     cast(candidateId as {{ dbt_utils.type_string() }}) as candidateId,
     cast(candidate_email as {{ dbt_utils.type_string() }}) as candidate_email,

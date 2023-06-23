@@ -12,7 +12,7 @@ select
     cast(endAt as {{ dbt_utils.type_string() }}) as endAt,
     cast(location as {{ dbt_utils.type_string() }}) as location,
     cast(interviewId as {{ dbt_utils.type_string() }}) as interviewId,
-    cast(createdAt as {{ dbt_utils.type_string() }}) as createdAt,
+    cast(createdAt as timestamp with time zone) as createdAt,
     cast(createdBy_email as {{ dbt_utils.type_string() }}) as createdBy_email,
     cast(createdBy_userId as {{ dbt_utils.type_string() }}) as createdBy_userId,
     cast(createdBy_lastName as {{ dbt_utils.type_string() }}) as createdBy_lastName,

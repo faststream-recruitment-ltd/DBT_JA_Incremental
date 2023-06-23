@@ -8,7 +8,7 @@
 -- depends_on: {{ ref('candidates_custom_ab1') }}
 select
     candidateid,
-    cast(updatedat as {{ dbt_utils.type_string() }}) as updatedat,
+    cast(updatedat as timestamp with time zone) as updatedat,
     cast({{ adapter.quote('name') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('name') }},
     cast({{ adapter.quote('type') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('type') }},
     {{ adapter.quote('value') }},

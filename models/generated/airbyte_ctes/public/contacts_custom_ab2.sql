@@ -10,7 +10,7 @@ select
     contactid,
     cast(contact_firstname as {{ dbt_utils.type_string() }}) as contact_firstname,
     cast(contact_lastname as {{ dbt_utils.type_string() }}) as contact_lastname,
-    cast(updatedat as {{ dbt_utils.type_string() }}) as updatedat,
+    cast(updatedat as timestamp with time zone) updatedat,
     cast({{ adapter.quote('name') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('name') }},
     cast({{ adapter.quote('type') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('type') }},
     {{ adapter.quote('value') }},

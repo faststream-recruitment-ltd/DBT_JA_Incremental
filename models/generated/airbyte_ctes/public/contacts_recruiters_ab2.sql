@@ -7,7 +7,7 @@
 -- SQL model to cast each column to its adequate SQL type converted from the JSON schema type
 -- depends_on: {{ ref('contacts_recruiters_ab1') }}
 select
-    cast(updatedat as {{ dbt_utils.type_string() }}) as updatedat,
+    cast(updatedat as timestamp with time zone) as updatedat,
     contactid,
     cast(contact_firstname as {{ dbt_utils.type_string() }}) as contact_firstname,
     cast(contact_lastname as {{ dbt_utils.type_string() }}) as contact_lastname,

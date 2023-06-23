@@ -7,8 +7,8 @@
 -- SQL model to cast each column to its adequate SQL type converted from the JSON schema type
 -- depends_on: {{ ref('contacts_ab1') }}
 select
-    cast(createdat as {{ dbt_utils.type_string() }}) as createdat,
-    cast(updatedat as {{ dbt_utils.type_string() }}) as updatedat,
+    cast(createdat as timestamp with time zone) as createdat,
+    cast(updatedat as timestamp with time zone) as updatedat,
     cast(contactid as {{ dbt_utils.type_bigint() }}) as contactid,
     cast(salutation as {{ dbt_utils.type_string() }}) as salutation,
     cast(firstname as {{ dbt_utils.type_string() }}) as firstname,

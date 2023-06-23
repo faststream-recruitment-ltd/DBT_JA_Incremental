@@ -9,7 +9,7 @@
 select
     cast(type as {{ dbt_utils.type_string() }}) as type,
     interviewid,
-    cast(createdat as {{ dbt_utils.type_string() }}) as createdat,
+    cast(createdat as timestamp with time zone) as createdat,
     cast(contact_email as {{ dbt_utils.type_string() }}) as contact_email,
     cast(contactid as {{ dbt_utils.type_string() }}) as contactid,
     cast(contact_firstname as {{ dbt_utils.type_string() }}) as contact_firstname,
