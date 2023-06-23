@@ -56,14 +56,11 @@ AND type IN (
         'Float by email',
         'Floated by email',
         'Interview',
-        'Job Closed/On Hold',
-        'Job Created - Contract',
-        'Job Created - Perm',
         'Left Voicemail/No Contact',
         'Phone Call',
-        'Phone Call - Business Development',
-        'Phone Call - business Development',
-        'Phone Call - Control',
+        'Phone Call – Business Development',
+        'Phone Call – business Development',
+        'Phone Call – Control',
         'Resume Submitted'
     )
     AND source NOT LIKE '%Status%'
