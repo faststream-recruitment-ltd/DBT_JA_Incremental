@@ -7,8 +7,8 @@
 -- SQL model to cast each column to its adequate SQL type converted from the JSON schema type
 -- depends_on: {{ ref('companies_custom_ab1') }}
 select
-    companyid,
-    cast(updatedat as timestamp with time zone) as updatedat,
+    cast(companyId as {{ dbt_utils.type_bigint() }}) as companyId,
+    cast(updatedat as timestamp) as updatedat,
     cast(company_name as {{ dbt_utils.type_string() }}) as company_name,    
     cast({{ adapter.quote('name') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('name') }},
     cast({{ adapter.quote('type') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('type') }},

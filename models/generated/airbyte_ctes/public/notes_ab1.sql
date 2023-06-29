@@ -12,6 +12,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['noteId'], ['noteId']) }} as noteid,
     {{ json_extract_scalar('_airbyte_data', ['source'], ['source']) }} as {{ adapter.quote('source') }},
     {{ json_extract_scalar('_airbyte_data', ['createdAt'], ['createdAt']) }} as createdat,
+    {{ json_extract_scalar('_airbyte_data', ['updatedAt'], ['updatedAt']) }} as updatedat,
     {{ json_extract('table_alias', '_airbyte_data', ['createdBy'], ['createdBy']) }} as createdby,
     {{ json_extract_scalar('_airbyte_data', ['createdBy', 'userId'], ['createdBy_userId']) }} as createdBy_userId,
     {{ json_extract_scalar('_airbyte_data', ['createdBy', 'email'], ['createdBy_email']) }} as createdBy_email,

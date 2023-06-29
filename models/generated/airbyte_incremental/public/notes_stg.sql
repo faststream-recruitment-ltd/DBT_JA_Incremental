@@ -37,6 +37,7 @@ select
         adapter.quote('type'),
         'reference',
         'createdat',
+        'updatedat',
         array_to_string('candidates'),
         'candidateId',
         'candidate_email',

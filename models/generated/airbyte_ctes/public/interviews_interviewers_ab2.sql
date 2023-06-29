@@ -8,14 +8,14 @@
 -- depends_on: {{ ref('interviews_interviewers_ab1') }}
 select
     cast(type as {{ dbt_utils.type_string() }}) as type,
-    interviewid,
-    cast(createdat as timestamp with time zone) as createdat,
+    cast(interviewId as {{ dbt_utils.type_bigint() }}) as interviewId,
+    cast(createdat as timestamp) as createdat,
     cast(contact_email as {{ dbt_utils.type_string() }}) as contact_email,
-    cast(contactid as {{ dbt_utils.type_string() }}) as contactid,
+    cast(contactid as {{ dbt_utils.type_bigint() }}) as contactid,
     cast(contact_firstname as {{ dbt_utils.type_string() }}) as contact_firstname,
     cast(contact_lastname as {{ dbt_utils.type_string() }}) as contact_lastname,
     cast(user_email as {{ dbt_utils.type_string() }}) as user_email,
-    cast(userid as {{ dbt_utils.type_string() }}) as userid,
+    cast(userid as {{ dbt_utils.type_bigint() }}) as userid,
     cast(user_firstname as {{ dbt_utils.type_string() }}) as user_firstname,
     cast(user_lastname as {{ dbt_utils.type_string() }}) as user_lastname,        
     _airbyte_ab_id,
