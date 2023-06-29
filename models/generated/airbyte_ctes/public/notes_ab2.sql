@@ -8,8 +8,8 @@
 -- depends_on: {{ ref('notes_ab1') }}
 select
     attachments,
-    cast(attachmentId as {{ dbt_utils.type_bigint() }}) as attachmentId,
-    cast(attachment_createdAt as {{ dbt_utils.type_string() }}) as attachment_createdAt,
+    cast(attachmentId as {{ dbt_utils.type_string() }}) as attachmentId,
+    cast(attachment_createdAt as timestamp) as attachment_createdAt,
     cast(attachment_fileType as {{ dbt_utils.type_string() }}) as attachment_fileType,
     cast(attachment_fileName as {{ dbt_utils.type_string() }}) as attachment_fileName,
     cast(subject as {{ dbt_utils.type_string() }}) as subject,
@@ -57,10 +57,10 @@ select
     cast(contact_lastName as {{ dbt_utils.type_string() }}) as contact_lastName,
     applications,
     cast(applicationId as {{ dbt_utils.type_bigint() }}) as applicationId,
-    cast(application_jobId as {{ dbt_utils.type_string() }}) as application_jobId,    
+    cast(application_jobId as {{ dbt_utils.type_bigint() }}) as application_jobId,    
     cast(application_jobTitle as {{ dbt_utils.type_string() }}) as application_jobTitle,
     cast(application_company as {{ dbt_utils.type_string() }}) as application_company,
-    cast(application_companyId as {{ dbt_utils.type_string() }}) as application_companyId,
+    cast(application_companyId as {{ dbt_utils.type_bigint() }}) as application_companyId,
     cast(application_contactId as {{ dbt_utils.type_string() }}) as application_contactId,
     cast(application_contact_firstName as {{ dbt_utils.type_string() }}) as application_contact_firstName,
     cast(application_contact_lastName as {{ dbt_utils.type_string() }}) as application_contact_lastName,    
