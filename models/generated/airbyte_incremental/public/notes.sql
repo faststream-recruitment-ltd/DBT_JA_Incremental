@@ -14,6 +14,7 @@ select
     reference,
     {{ adapter.quote('source') }},
     createdat,
+    updatedat,
     createdBy_userId,
     createdBy_email,
     createdBy_firstName,

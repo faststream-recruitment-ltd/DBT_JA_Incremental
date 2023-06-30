@@ -13,6 +13,7 @@ select
     {{ adapter.quote('type') }},
     reference,
     {{ adapter.quote('source') }},
+    updatedat,
     createdat,
     createdBy_userId,
     createdBy_email,
