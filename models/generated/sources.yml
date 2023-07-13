@@ -21,3 +21,6 @@ sources:
   - name: _airbyte_raw_placements
   - name: _airbyte_raw_user_groups
   - name: _airbyte_raw_users
+  - name: _airbyte_raw_applications
+  - name: _airbyte_raw_candidate_attachments
+

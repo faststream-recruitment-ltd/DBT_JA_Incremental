@@ -49,6 +49,21 @@ dispatch:
 vars:
   json_column: _airbyte_data
   models_to_source:
+    job_ads_ab1: public._airbyte_raw_job_ads
+    job_ads_ab2: public._airbyte_raw_job_ads
+    job_ads_stg: public._airbyte_raw_job_ads
+    job_ads_scd: public._airbyte_raw_job_ads
+    job_ads: public._airbyte_raw_job_ads
+    candidate_attachments_ab1: public._airbyte_raw_candidate_attachments
+    candidate_attachments_ab2: public._airbyte_raw_candidate_attachments
+    candidate_attachments_stg: public._airbyte_raw_candidate_attachments
+    candidate_attachments_scd: public._airbyte_raw_candidate_attachments
+    candidate_attachments: public._airbyte_raw_candidate_attachments
+    applications_ab1: public._airbyte_raw_applications
+    applications_ab2: public._airbyte_raw_applications
+    applications_stg: public._airbyte_raw_applications
+    applications_scd: public._airbyte_raw_applications
+    applications: public._airbyte_raw_applications
     candidates_ab1: public._airbyte_raw_candidates
     candidates_ab2: public._airbyte_raw_candidates
     candidates_stg: public._airbyte_raw_candidates
@@ -304,38 +319,6 @@ vars:
     jobs_statistics_ab2: public._airbyte_raw_jobs
     jobs_statistics_ab3: public._airbyte_raw_jobs
     jobs_statistics: public._airbyte_raw_jobs
-    job_ads_owner_ab1: public._airbyte_raw_job_ads
-    job_ads_owner_ab2: public._airbyte_raw_job_ads
-    job_ads_owner_ab3: public._airbyte_raw_job_ads
-    job_ads_owner: public._airbyte_raw_job_ads
-    job_ads_jobboards_ab1: public._airbyte_raw_job_ads
-    job_ads_jobboards_ab2: public._airbyte_raw_job_ads
-    job_ads_jobboards_ab3: public._airbyte_raw_job_ads
-    job_ads_jobboards: public._airbyte_raw_job_ads
-    job_ads_createdby_ab1: public._airbyte_raw_job_ads
-    job_ads_createdby_ab2: public._airbyte_raw_job_ads
-    job_ads_createdby_ab3: public._airbyte_raw_job_ads
-    job_ads_createdby: public._airbyte_raw_job_ads
-    job_ads_contact_ab1: public._airbyte_raw_job_ads
-    job_ads_contact_ab2: public._airbyte_raw_job_ads
-    job_ads_contact_ab3: public._airbyte_raw_job_ads
-    job_ads_contact: public._airbyte_raw_job_ads
-    job_ads_links_ab1: public._airbyte_raw_job_ads
-    job_ads_links_ab2: public._airbyte_raw_job_ads
-    job_ads_links_ab3: public._airbyte_raw_job_ads
-    job_ads_links: public._airbyte_raw_job_ads
-    job_ads_company_ab1: public._airbyte_raw_job_ads
-    job_ads_company_ab2: public._airbyte_raw_job_ads
-    job_ads_company_ab3: public._airbyte_raw_job_ads
-    job_ads_company: public._airbyte_raw_job_ads
-    job_ads_job_ab1: public._airbyte_raw_job_ads
-    job_ads_job_ab2: public._airbyte_raw_job_ads
-    job_ads_job_ab3: public._airbyte_raw_job_ads
-    job_ads_job: public._airbyte_raw_job_ads
-    job_ads_otherapplyurls_ab1: public._airbyte_raw_job_ads
-    job_ads_otherapplyurls_ab2: public._airbyte_raw_job_ads
-    job_ads_otherapplyurls_ab3: public._airbyte_raw_job_ads
-    job_ads_otherapplyurls: public._airbyte_raw_job_ads
     placements_source_ab1: public._airbyte_raw_placements
     placements_source_ab2: public._airbyte_raw_placements
     placements_source_ab3: public._airbyte_raw_placements
