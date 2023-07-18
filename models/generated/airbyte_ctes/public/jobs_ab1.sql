@@ -9,6 +9,8 @@
 select
     {{ json_extract_scalar('_airbyte_data', ['fee', 'currency'], ['fee_currency']) }} as fee_currency,
     {{ json_extract_scalar('_airbyte_data', ['fee', 'rateType'], ['fee_rateType']) }} as fee_rateType,
+    {{ json_extract_scalar('_airbyte_data', ['fee', 'rate'], ['fee_rate']) }} as fee_rate,
+    {{ json_extract_scalar('_airbyte_data', ['fee', 'estimatedTotal'], ['fee_estimatedTotal']) }} as fee_estimatedTotal,
     {{ json_extract_scalar('_airbyte_data', ['jobId'], ['jobId']) }} as jobId,
     {{ json_extract_scalar('_airbyte_data', ['owner', 'email'], ['owner_email']) }} as owner_email,
     {{ json_extract_scalar('_airbyte_data', ['owner', 'userId'], ['owner_userId']) }} as owner_userId,

@@ -9,6 +9,8 @@
 select
     cast(fee_currency as {{ dbt_utils.type_string() }})  as fee_currency,
     cast(fee_rateType as {{ dbt_utils.type_string() }})  as fee_rateType,
+    cast(fee_rate as {{ dbt_utils.type_string() }}) as fee_rate,
+    cast(fee_estimatedTotal as {{ dbt_utils.type_bigint() }})  as fee_estimatedTotal,
     cast(jobId as {{ dbt_utils.type_bigint() }})  as jobId,
     cast(owner_email as {{ dbt_utils.type_string() }})  as owner_email,
     cast(owner_userId as {{ dbt_utils.type_bigint() }})  as owner_userId,

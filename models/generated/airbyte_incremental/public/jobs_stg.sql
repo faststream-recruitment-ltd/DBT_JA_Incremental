@@ -10,6 +10,8 @@ select
     {{ dbt_utils.surrogate_key([
     'fee_currency',
     'fee_rateType',
+    'fee_rate',
+    'fee_estimatedTotal',
     'jobId',
     'owner_email',
     'owner_userId',

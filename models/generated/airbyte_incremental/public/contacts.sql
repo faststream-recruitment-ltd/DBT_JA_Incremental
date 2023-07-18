@@ -15,6 +15,7 @@ select
     firstname,
     lastname,   
     email,
+    otheremail,
     inactive,
     unsubscribed,
     phone,

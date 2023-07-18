@@ -14,6 +14,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['firstName'], ['firstName']) }} as firstName,
     {{ json_extract_scalar('_airbyte_data', ['lastName'], ['lastName']) }} as lastName,    
     {{ json_extract_scalar('_airbyte_data', ['email'], ['email']) }} as email,
+    {{ json_extract_scalar('_airbyte_data', ['otherEmail'], ['otherEmail']) }} as otheremail,
     {{ json_extract_scalar('_airbyte_data', ['inactive'], ['inactive']) }} as inactive,
     {{ json_extract_scalar('_airbyte_data', ['unsubscribed'], ['unsubscribed']) }} as unsubscribed,
     {{ json_extract_scalar('_airbyte_data', ['phone'], ['phone']) }} as phone,
@@ -57,4 +58,5 @@ from {{ source('public', '_airbyte_raw_contacts') }} as table_alias
 -- contacts
 where 1 = 1
 {{ incremental_clause('_airbyte_emitted_at', this) }}
+
 

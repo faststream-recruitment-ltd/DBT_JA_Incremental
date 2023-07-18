@@ -14,6 +14,7 @@ select
     cast(firstname as {{ dbt_utils.type_string() }}) as firstname,
     cast(lastname as {{ dbt_utils.type_string() }}) as lastname,   
     cast(email as {{ dbt_utils.type_string() }}) as email,
+    cast(otheremail as {{ dbt_utils.type_string() }}) as otheremail,
     cast(inactive as {{ dbt_utils.type_string() }}) as inactive,
     cast(unsubscribed as {{ dbt_utils.type_string() }}) as unsubscribed,
     cast(phone as {{ dbt_utils.type_string() }}) as phone,
