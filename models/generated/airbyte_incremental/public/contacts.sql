@@ -28,6 +28,7 @@ select
     statusid,
     company_name,
     companyid,
+    office_name,
     country,
     city,
     street,
