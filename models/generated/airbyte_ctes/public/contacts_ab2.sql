@@ -21,7 +21,7 @@ select
     cast(mobile as {{ dbt_utils.type_string() }}) as mobile,
     cast(owner_firstName as {{ dbt_utils.type_string() }}) as owner_firstName,
     cast(owner_lastName as {{ dbt_utils.type_string() }}) as owner_lastName,
-    cast(owner_userId as {{ dbt_utils.type_string() }}) as owner_userId, 
+    cast(owner_userId as {{ dbt_utils.type_bigint() }}) as owner_userId, 
     cast(owner_email as {{ dbt_utils.type_string() }}) as owner_email, 
     cast(status_name as {{ dbt_utils.type_string() }}) as status_name,     
     cast(statusid as {{ dbt_utils.type_bigint() }}) as statusid,

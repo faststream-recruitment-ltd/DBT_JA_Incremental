@@ -21,6 +21,7 @@ select
     phone,
     mobile,
     owner_firstName,
+    owner_lastName,
     owner_userId, 
     owner_email, 
     status_name,     
