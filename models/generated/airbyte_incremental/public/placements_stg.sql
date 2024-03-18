@@ -21,6 +21,7 @@ select
         'salary_total',
         'status_name',
         'status_statusId',
+        'placement_source',
         'company_companyId',
         'company_name',
         'contact_email',

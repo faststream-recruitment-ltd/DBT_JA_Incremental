@@ -20,6 +20,7 @@ select
     cast(salary_total as {{ dbt_utils.type_string() }}) as salary_total,
     cast(status_name as {{ dbt_utils.type_string() }}) as status_name,
     cast(status_statusId as {{ dbt_utils.type_string() }}) as status_statusId,
+    cast(placement_source as {{ dbt_utils.type_string() }}) as placement_source,
     cast(company_companyId as {{ dbt_utils.type_bigint() }}) as company_companyId,
     cast(company_name as {{ dbt_utils.type_string() }}) as company_name,
     contact_email,

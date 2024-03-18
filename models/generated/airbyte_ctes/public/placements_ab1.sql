@@ -21,6 +21,7 @@ select
     {{ json_extract_scalar('_airbyte_data', ['salary', 'total'], ['salary_total']) }} as salary_total,
     {{ json_extract_scalar('_airbyte_data', ['status', 'name'], ['status_name']) }} as status_name,
     {{ json_extract_scalar('_airbyte_data', ['status', 'statusId'], ['status_statusId']) }} as status_statusId,
+    {{ json_extract_scalar('_airbyte_data', ['source', 'placement'], ['placement_source']) }} as placement_source,
     {{ json_extract_scalar('_airbyte_data', ['company', 'companyId'], ['company_companyId']) }} as company_companyId,
     {{ json_extract_scalar('_airbyte_data', ['company', 'name'], ['company_name']) }} as company_name,
     {{ json_extract_scalar('_airbyte_data', ['contact', 'email'], ['contact_email']) }} as contact_email,
